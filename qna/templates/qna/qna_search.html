@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}qna_search.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+<h1> 묻고답하기 검색 </h1>
+<form action="." method="post"> {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit" />
+</form>
+
+<br/><br/>
+
+{% if object_list %}
+    {% for qna in object_list %}
+        <h2><a href='{{ qna.get_absolute_url }}'>{{ qna.subject }}</a></h2>
+       <p>{{ qna.class_kind }} | {{ qna.mdate|date:"Y. N. d" }} | {{ qna.owner }}</p>
+    {% endfor %}
+{% elif search_term %}
+    <b><i>Search Word({{ search_term }}) Not Found !</i></b>
+{% endif %}
+
+</div>
+{% endblock %}

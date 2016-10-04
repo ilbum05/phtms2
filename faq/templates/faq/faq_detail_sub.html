@@ -1,0 +1,19 @@
+
+<div class="privacyBox">
+<!-- <div class="boardListBox"> -->
+<div id="content">
+	<h2>{{ object.class_kind }} | {{ object.subject }}</h2>
+	<p class="date">{{ object.mdate|date:"Y. N. d" }} |  {{ object.owner }} </p><br/>
+	<p class="other_faqs">
+		{% if object.get_previous_by_mdate %}
+			<a href="{{ object.get_previous_faq.get_absolute_url }}" title="View previous FAQ">&laquo;--이전 자주묻는질문</a>
+		{% endif %}
+		{% if object.get_next_by_mdate %}
+			| <a href="{{ object.get_next_faq.get_absolute_url }}" title="View next faq">다음 자주묻는질문--&raquo;</a><br /><br />
+		{% endif %}
+	</p>
+	<div class="body">
+		{{ object.content|linebreaks }}
+	</div>
+</div>
+

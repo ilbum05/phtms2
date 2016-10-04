@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+{% load staticfiles %}
+{% include "./body_meta.html" %}
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
+<link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
+
+<title>{% block title %}PHTMS{% endblock %}</title>
+</head>
+<body>
+	<header id="header">
+	{% block header %}
+	    {% include "./body_header.html" %}
+	{% endblock header %}
+	</header>
+
+	{% block content %}{% endblock %}
+	
+	<footer>
+		{% block footer %}{% include "./body_footer.html" %}{% endblock footer %}
+	</footer>
+	
+</html> 

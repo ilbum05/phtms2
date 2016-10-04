@@ -1,0 +1,14 @@
+{% load staticfiles %}
+	<div id="leftMenu">
+		<h2 class="leftMenuTitle">고객센터<span class="smallText return">DOILSystems Co.></span></h2>
+		<ul id="menuList">
+			<li class="on2 first on"><a href="{% url 'notice:index' %}"><span class="menuName">TMS-공지사항</span></a></li>
+			<li><a href="{% url 'qna:index' %}"><span class="menuName">TMS-문의하기</span></a></li>
+			<li><a href="{% url 'faq:index' %}"><span class="menuName">TMS-자주묻는질문</span></a></li>
+			<li class="last"><a href="{% url 'refer:index' %}"><span class="menuName">TMS-자료실</span></a></li>
+<!--			<li><a href="{% url 'eprivacy' %}"><span class="menuName">TMS-개인정보취급방침</span></a></li>
+			<li><a href="{% url 'eagree' %}"><span class="menuName">TMS-이용약관</span></a></li>
+			<li class="last"><a href="{% url "esite" %}"><span class="menuName">사이트 맵</span></a></li>			
+-->
+		</ul>
+	</div>

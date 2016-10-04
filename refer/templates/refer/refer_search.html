@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}refer_search.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+<h1> 자료실 검색 </h1>
+<form action="." method="post"> {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit" />
+</form>
+
+<br/><br/>
+
+{% if object_list %}
+    {% for refer in object_list %}
+        <h2><a href='{{ refer.get_absolute_url }}'>{{ refer.subject }}</a></h2>
+       <p>{{ refer.class_kind }} | {{ refer.mdate|date:"Y. N. d" }} | {{ refer.owner }}</p>
+    {% endfor %}
+{% elif search_term %}
+    <b><i>Search Word({{ search_term }}) Not Found !</i></b>
+{% endif %}
+
+</div>
+{% endblock %}

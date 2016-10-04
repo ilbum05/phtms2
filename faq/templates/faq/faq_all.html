@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}PH Total Management System{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+<section id="contents">
+  <div id="contentsInner">
+    <div id="leftBanner">      
+		{% include "../banner_left_customer.html" %}
+		{% include "../banner_left.html" %}
+	</div>
+<!-- other page :  다음 block 변경   -->
+		<div id="title">
+			<p class="location"><a href="./"><img src="{% static "images/home_9.png" %}" alt="home" />HOME</a> &gt;
+				<span class="upLevel1"><a href="./">고객센터</span> &gt; <span class="now"><a href="./">TMS:자주묻는질문</a></span></p>
+			<h2 class="title">&nbsp &nbsp &nbspTMS:자주묻는질문</h2>
+		</div>
+		{% include "../banner_right.html" %}
+		{% include "./faq_all_sub.html" %}
+<!-- other page :  상기 block 변경                     -->
+
+
+	</div>
+</section>>
+{% endblock content %}
+
+</body>

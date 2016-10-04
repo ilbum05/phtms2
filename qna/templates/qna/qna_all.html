@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}qna_all.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>묻고 답하기 List</h1>
+
+    {% for qna in qnas %}
+        <h2><a href='{{ qna.get_absolute_url }}'>{{ qna.subject }}</a></h2>
+        <p>{{ qna.class_kind }} | {{ qna.mdate|date:"Y. N. d" }} | {{ qna.owner }}</p>
+    {% endfor %}
+    <br/>
+    <div>
+        <span>
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">이전 페이지</a>
+            {% endif %}
+      
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+      
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">다음 페이지</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}faq_search.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+<h1> 자주묻는질문 검색 </h1>
+<form action="." method="post"> {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit" />
+</form>
+
+<br/><br/>
+
+{% if object_list %}
+    {% for faq in object_list %}
+        <h2><a href='{{ faq.get_absolute_url }}'>{{ faq.subject }}</a></h2>
+       <p>{{ faq.class_kind }} | {{ faq.mdate|date:"Y. N. d" }} | {{ faq.owner }}</p>
+    {% endfor %}
+{% elif search_term %}
+    <b><i>Search Word({{ search_term }}) Not Found !</i></b>
+{% endif %}
+
+</div>
+{% endblock %}

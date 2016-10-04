@@ -1,0 +1,10 @@
+{% load staticfiles %}
+	<div id="leftMenu">
+		<h2 class="leftMenuTitle">서비스소개<span class="smallText return">DOILSystems Co.></span></h2>
+		<ul id="menuList">
+			<li class="on2 first on"><a href="{% url "ebid" %}"><span class="menuName">전자입찰서비스</span></a></li>
+			<li><a href="{% url "epms" %}"><span class="menuName">공사관리서비스</span></a></li>
+			<li><a href="{% url "emro" %}"><span class="menuName">구매대행서비스</span></a></li>
+			<li class="last"><a href="{% url "evote" %}"><span class="menuName">전자투표서비스</span></a></li>
+		</ul>
+	</div>

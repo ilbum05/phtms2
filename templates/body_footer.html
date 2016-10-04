@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% block content %}
+<div id="footer">
+	<div id="footerInner">
+		<div class="footerWrap">
+			<p class="footerlogo1"><img src="{% static "img/footer_logo1.png" %}" alt="도일시스템즈1" /></p>
+			<p class="footerlogo2"><img src="{% static "img/footer_logo2.png" %}" alt="도일시스템즈2" /></p>
+		<div id="footerMenu">
+			<h2 class="blind">하단메뉴</h2>
+			<ul class="footerMenuList">
+				<li class="first"><a href="{% url "eintro" %}">회사소개</a></li>
+				<li><a href="{% url "eprivacy" %}">개인정보취급방침</a></li>
+				<li><a href="{% url "eagree" %}">이용약관</a></li>
+				<li><a href="{% url "emap" %}">찾아오는 길</a></li>
+				<li class="last"><a href="{% url "esite" %}">사이트맵</a></li>
+
+			</ul>
+		</div>
+		<address>
+			<span class="default addr">주소 : 경기도 안양시 만안구 박달로 453</span>
+			<span class="busNo">사업자등록번호 : 135-86-04475</span>
+			<span class="busNo">통신판매업신고번호 : 135-86-04475</span><br />
+			<span class="default name">대표이사 : 김상호</span>
+			<span class="telNo">Tel. 070-4138-5969</span>
+			<span class="telNo">Fax. 070-4138-5969</span>
+			<span class="default name">개인정보보호책임자 : 김상호</span>
+			<span class="telNo">eMail to: <a href="mailto:CustomCtr@ebidding.co.kr">고객센터</a></span><br />
+			<span class="return default copyright">&copy; DoilSystems Co., Ltd. All Rights Reserved <a href="./admin/" target="_blank">(주)도일시스템즈</a></span>
+		</address>
+	</div>
+</div>
+{% endblock %}

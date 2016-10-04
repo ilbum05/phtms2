@@ -1,0 +1,364 @@
+@charset "utf-8";
+
+#notice_css .boardViewBox dl.contentsView dd:last-child {
+	border-bottom: 1px solid #ccc;
+}
+#notice_css .boardViewBox dl.contentsView dd span.upLoadFile {/*첨부파일 및 업로드파일 표시 설정*/
+	padding-bottom: 0;
+}
+/* -------------------------- list -------------------------- */
+/*#contentsInner .boardListBox{ */
+#notice_css .boardListBox {
+	position: relative;
+	float:left;
+	top: -10px;
+	width: 770px;
+	margin-left:10px;
+}
+#notice_css .boardListBox table.baseBoardList {
+	position: relative;
+	float:left;
+	top: -10px;
+	width: 770px;
+	margin-left:10px;
+}
+/* 원본 
+#notice_css .boardListBox table.baseBoardList {
+	margin-bottom: 10px;
+	border-top: 2px solid #999;
+	border-bottom: 1px solid #999;
+}
+*/
+#notice_css .boardListBox table.baseBoardList tbody th, #notice_css .boardListBox table.baseBoardList tbody td{
+	padding: 10px 0;
+	text-align: center;
+	border-top: 1px dotted #ccc;
+}
+#notice_css .boardListBox table.baseBoardList tbody tr.first th, #notice_css .boardListBox table.baseBoardList tbody tr.first td{
+	border-top : none;
+}
+#notice_css .boardListBox table.baseBoardList tr.selectTr{
+	background: #F5F5F5;
+}
+#notice_css .boardListBox table.baseBoardList th {
+	padding: 12px 0;
+	font-size: 1.2em;
+	color: #333;	
+	border-bottom: 1px solid #999;
+	background: url(../images/footer_menu_line.jpg) no-repeat right center;
+}
+#notice_css .boardListBox table.baseBoardList th.last {
+	background: none;
+}
+#notice_css .boardListBox table.baseBoardList td {
+	color: #666;
+}
+#notice_css .boardListBox ul.butList{
+	margin-top: 20px;
+}
+/* ---------------------- ul.gallery ------------------- */
+#notice_css .galleryListBox ul.gallery {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border-top: 3px solid #ccc;
+	border-bottom: 3px solid #ccc;
+}
+#notice_css .galleryListBox ul.gallery li {
+	float: left;
+	text-align: center;
+}
+#notice_css .galleryListBox ul.gallery li span.return{
+	padding: 10px 0;
+}
+#notice_css .galleryListBox ul.gallery li span.img{
+	display: block;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+#notice_css .galleryListBox ul.gallery li.selectLi span.img{
+	border: 1px solid #FF6600;
+}
+#notice_css .galleryListBox ul.gallery li span.img img{
+	width: 100%;
+}
+#notice_css .galleryListBox p.noData{
+	margin-bottom: 10px;
+	padding: 20px 0;
+	text-align: center;
+	border-top: 3px solid #ccc;
+	border-bottom: 3px solid #ccc;
+}
+#notice_css .galleryListBox ul.butList{
+	margin-top: 20px;
+}
+/* -------------------- write/modify/reply ------------------- */
+#notice_css .boardWriteBox {
+}
+#notice_css .boardWriteBox table.baseBoardWrite {
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 10px;
+}
+#notice_css .boardWriteBox table.baseBoardWrite th, #notice_css .boardWriteBox table.baseBoardWrite td{
+	padding: 10px 0;
+	border-bottom: 1px dotted #ccc;
+}
+#notice_css .boardWriteBox table.baseBoardWrite tr.last th, #notice_css .boardWriteBox table.baseBoardWrite tr.last td{
+	border: none;
+}
+#notice_css .boardWriteBox table.baseBoardWrite th {
+	color: #333;
+  	padding-left: 30px;
+	text-align: justify;
+	background: url(../images/board/grey_check.gif) no-repeat 13px center;
+}
+#notice_css .boardWriteBox table.baseBoardWrite th.check {
+	background: url(../images/board/check.gif) no-repeat 13px center;
+}
+
+#notice_css .boardWriteBox table.baseBoardWrite td {
+	color: #666;
+}
+#notice_css .boardWriteBox table.baseBoardWrite td > textarea {
+	width: 700px;
+}
+/* -------------------- view ------------------- */
+#notice_css .boardViewBox {
+	margin-bottom: 30px;
+}
+#notice_css .boardViewBox dl.contentsView {
+	margin-top: 20px;
+	border-top: 2px solid #ccc;
+	margin-bottom: 10px;
+}
+#notice_css .boardViewBox dl.contentsView dt, #notice_css .boardViewBox dl.contentsView dd{
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+#notice_css .boardViewBox dl.contentsView dt span.subject {/*제목 설정*/
+	display: block;
+	margin-bottom: 5px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#notice_css .boardViewBox dl.contentsView dd span.contentsInFile {/*내용안의 이미지파일등의 설정*/
+	display: block;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#notice_css .boardViewBox dl.contentsView dd span.upLoadFile {/*첨부파일 및 업로드파일 표시 설정*/
+	display: block;
+	margin-top: 10px;
+	padding: 10px 0;
+	border-top: 1px solid #ccc;
+}
+#notice_css .boardViewBox dl.contentsView dd:last-child {
+	border-bottom: none;
+}
+#notice_css .boardViewBox dl.contentsView dd img {/*내용안의 이미지 설정*/
+	max-width: 95%;
+	height: auto;
+}
+#notice_css .boardViewBox table.baseBoardView {
+	margin-top: 20px;
+	border-top: 2px solid #ccc;
+	margin-bottom: 10px;
+}
+#notice_css .boardViewBox table.baseBoardView tr.last th, #notice_css .boardViewBox table.baseBoardView tr.last td{
+	border: none;
+}
+#notice_css .boardViewBox table.baseBoardView th, #notice_css .boardViewBox table.baseBoardView > tbody > tr > td{
+	padding: 10px 0;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+/*#notice_css .boardViewBox table.baseBoardView th {
+	color: #333;
+  	padding-left: 15px;
+	text-align: left;
+	font-weight: bold;
+	background: url(../images/board/grey_check.gif) no-repeat 0 center;
+}
+#notice_css .boardViewBox table.baseBoardView th.check {
+	background: url(../images/board/check.gif) no-repeat 0 center;
+}*/
+#notice_css .boardViewBox table.baseBoardView th {
+	margin-bottom: 20px;
+}
+#notice_css .boardViewBox table.baseBoardView th span.date{
+	color: #333;
+	padding-left: 0px;
+	text-align: justify;
+	background: none;
+	margin-top: 3px;
+	font-weight: normal;
+	font-size: 0.8em;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td {
+	color: #666;
+	text-align: left;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td.contents {
+	text-align: center;
+	padding: 20px 0;
+	background: none;
+	line-height: 1.5;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td.contents img{
+	margin-bottom: 5px;
+	max-width: 95%;
+	height: auto;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td.contents img.on{
+	max-width: 95%;
+	height: auto;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td.contents embed{
+	margin-bottom: 5px;
+}
+#notice_css .boardViewBox table.baseBoardView > tbody > tr > td.contents embed.on{
+	max-width: 95%;
+	height: auto;
+}
+#notice_css .boardViewBox .butListWrap{
+	position: relative;
+}
+#notice_css .boardViewBox .butListWrap p.prev, #notice_css .boardViewBox .butListWrap p.next{
+	position: absolute;
+	top: 7px;
+	width: 40px;
+}
+#notice_css .boardViewBox .butListWrap p.prev{
+	left: 0;
+}
+#notice_css .boardViewBox .butListWrap p.next{
+	right: 0;
+}
+/* -------------------- comment ------------------- */
+#notice_css .commentBox {
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+#notice_css .commentBox ul.memoList {
+	margin-bottom: 10px;
+}
+#notice_css .commentBox ul.memoList li{
+	padding: 10px 0;
+	border-bottom: 1px dotted #ccc;
+}
+#notice_css .commentBox ul.memoList li span.memoContents{
+	display: block;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+#notice_css .commentBox ul.memoList li span.writerNdate{
+	display: block;
+	position: relative;
+}
+#notice_css .commentBox ul.memoList li span.memoDeleteBut{
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+#notice_css .commentBox ul.memoList li:last-child{
+	border-bottom: none;
+}
+#notice_css .commentBox table.memoBoardList {
+	margin-bottom: 10px;
+}
+#notice_css .commentBox table.memoBoardList tr.last th, #notice_css .commentBox table.memoBoardList tr.last td{
+	border: none;
+}
+#notice_css .commentBox table.memoBoardList th, #notice_css .commentBox table.memoBoardList td{
+	padding: 10px 0;
+	border-bottom: 1px dotted #ccc;
+}
+#notice_css .commentBox table.memoBoardList th {
+	color: #333;
+}
+#notice_css .commentBox table.memoBoardList td {
+	color: #666;
+}
+#notice_css .commentBox table.memoBoardList td span.memoContents{
+	display: block;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+#notice_css .commentBox .memoWrite {
+	margin-bottom: 10px;
+	padding: 15px;
+	text-align: center;
+	border-radius: 3px;
+	border: 1px solid #eee;
+	background: #F3F3F3;
+}
+#notice_css .commentBox .memoWrite span.memoInput{
+	display: block;
+	margin-bottom: 5px;
+}
+#notice_css .commentBox .memoWrite span.memoInput input{
+	padding: 5px 0;
+}
+#notice_css .commentBox .memoWrite label{
+	padding-left: 10px;
+	background: url(../images/arrow_16_blue.gif) no-repeat 0 5px;
+}
+
+/* ---------------------------------------------- */
+/* -------------------- login ------------------- */
+/* ---------------------------------------------- */
+#notice_css .boardLoginBox {
+	position: relative;
+	min-height: 290px;
+	padding: 30px;
+	padding-left: 350px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 10px solid #ccc;
+	background: url(../images/board/login_bg.png) no-repeat 30px center;
+}
+#notice_css .boardLoginBox form {
+	position: relative;
+}
+#notice_css .boardLoginBox form p.select {
+	padding: 20px 0;
+	border-bottom: 1px dotted #ccc;
+}
+#notice_css .boardLoginBox form dl {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+#notice_css .boardLoginBox form dl dt, #notice_css .boardLoginBox form dl dd {
+	padding: 5px 0;
+}
+/* ---------------------------------------------- */
+/* ----------------- mobile_login --------------- */
+/* ---------------------------------------------- */
+#notice_css .boardLoginMobileBox p.select{
+	padding: 10px 0;
+	border: 2px solid #ccc;
+}
+#notice_css .boardLoginMobileBox form {
+	position: relative;	
+}
+#notice_css .boardLoginMobileBox form p.select {
+	margin: 10px 0;
+	text-align: center;
+}
+#notice_css .boardLoginMobileBox form dl {
+	height: 50px;
+	margin-bottom: 10px;
+}
+#notice_css .boardLoginMobileBox form dl dd {
+	width: 100%;
+	margin-bottom: 5px;
+}
+#notice_css .boardLoginMobileBox p.notice {
+	margin-bottom: 20px;
+}
+#notice_css .boardLoginMobileBox p.loginBut {
+	text-align: center;
+}

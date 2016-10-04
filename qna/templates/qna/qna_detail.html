@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block subject %}qna_detail.html{% endblock %}
+
+{% block content %}
+<div id="content">
+	<h2>{{ object.subject }}</h2>
+	<p class="other_qnas">
+		{% if object.get_previous_by_mdate %}
+			<a href="{{ object.get_previous_qna.get_absolute_url }}" title="View previous QnA">&laquo;--{{ object.get_previous_qna }}</a>
+		{% endif %}
+		{% if object.get_next_by_mdate %}
+			| <a href="{{ object.get_next_qna.get_absolute_url }}" title="View next QnA">{{ object.get_next_qna }}--&raquo;</a>
+		{% endif %}
+	</p>
+	<p class="date">{{ object.class_kind }} | {{ object.mdate|date:"Y. N. d" }} |  {{ object.owner }} </p><br/>
+	<div class="body">
+		{{ object.content|linebreaks }}
+	</div>
+</div>
+{% endblock %}

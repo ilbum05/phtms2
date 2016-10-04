@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}faq_form.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/forms.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h1>자주묻는질문 등록/수정 - {{user}}</h1>
+
+    <form action="." method="post">{% csrf_token %}
+
+    {% if form.errors %}
+        <p class="errornote">Wrong! Please correct the error(s) below.</p>
+    {% endif %}
+
+    <p>This is a creation or update form for your post.</p>
+    <fieldset class="aligned">
+        <div class="form-row">{{ form.buz_id.label_tag }} {{ form.buz_id }}</div>
+        <div class="form-row">{{ form.class_kind.label_tag }} {{ form.class_kind }}</div>
+        <div class="form-row">{{ form.owner.label_tag }} {{ form.owner }}</div>
+		<div class="form-row">{{ form.subject.label_tag }} {{ form.subject }}</div>
+        <div class="form-row">{{ form.content.label_tag }} {{ form.content }}</div>
+        <div class="form-row">{{ form.attach.label_tag }} {{ form.attach }}</div>
+        <div class="form-row">{{ form.passno.label_tag }} {{ form.passno }}</div>
+    </fieldset>
+    <div class="submit-row">
+        <input type="submit" value="Submit"/>
+    </div>
+    <script type="text/javascript">document.getElementById('id_subject').focus();</script>
+    </form>
+</div>
+{% endblock %}

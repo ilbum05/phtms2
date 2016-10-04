@@ -1,0 +1,19 @@
+{% load staticfiles %}
+	<div class="rightBanner">
+      <div class="eblidding_btn">
+        <p><a href="http://localhost:8000" target="_blank"><img src="{% static "img/banner_btn_0.png" %}" alt="전자입찰바로가기" /></a></p>
+      </div>
+      <h2 class="quickMenuTitle"><img src="{% static "img/banner_title.jpg" %}" alt="quick menu" /></h2>
+      <ul class="quickMenu">
+        <li class="first"><a href="{% url 'notice:index' %}"><img src="{% static "img/banner_img_0.png" %}" alt="" /><span class="return">TMS:공지사항</span></a></li>
+        <li><a href="{% url 'qna:index' %}"><img src="{% static "img/banner_img_1.png" %}" alt="" /><span class="return">TMS:문의하기</span></a></li>
+        <li><a href="{% url 'faq:index' %}"><img src="{% static "img/banner_img_2.png" %}" alt="" /><span class="return">TMS:잦은질문</span></a></li>
+        <li class="last"><a href="{% url 'refer:index' %}"><img src="{% static "img/banner_img_3.png" %}" alt="" /><span class="return">TMS:자료실</span></a></li>
+      </ul>
+      <ul class="quickMenu2">
+		<li><a href="{% url 'ebid' %}" >전자입찰</a></li>
+		<li><a href="{% url 'epms' %}" >공사관리</a></li>
+		<li><a href="{% url 'emro' %}" >구매대행</a></li>
+		<li><a href="{% url 'evote' %}" >전자투표</a></li>
+      </ul>
+    </div>

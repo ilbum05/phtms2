@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}notice_search.html{% endblock %}
+
+{% block content %}
+<div id="content">
+
+<h1>공지사항 검색 </h1>
+<form action="." method="post"> {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit" />
+</form>
+
+<br/><br/>
+
+{% if object_list %}
+    {% for notice in object_list %}
+        <h2><a href='{{ notice.get_absolute_url }}'>{{ notice.subject }}</a></h2>
+       <p>{{ notice.class_kind }} | {{ notice.mdate|date:"Y. N. d" }} | {{ notice.owner }}</p>
+    {% endfor %}
+{% elif search_term %}
+    <b><i>Search Word({{ search_term }}) Not Found !</i></b>
+{% endif %}
+
+</div>
+{% endblock %}

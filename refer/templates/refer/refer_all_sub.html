@@ -1,0 +1,40 @@
+{% block content %}
+<div class="privacyBox">
+
+	<p class="h2Text">공동주택 관리와 관련한 자료들을 관리하고 있으니 많은 참조 바랍니다..<br />
+		<span class="orangeColor">(기타 필요한 자료가 있으면 고객센터로 연락주시기 바랍니다.)</span></p>
+	<table class="baseBoardList">
+		<colgroup>
+			<col width="6%" />
+			<col width="12%" />
+			<col width="*" />
+			<col width="10%" />
+			<col width="20% />
+			<col width="6%" />
+		<thead>
+			<tr>
+				<th scope="col">번호</th>
+				<th scope="col">구분</th>
+				<th scope="col">제목</th>
+				<th scope="col">파일</th>
+				<th scope="col">작성일</th>
+				<th scope="col">조회수</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in object_list %}
+				<tr>
+					<td>{{ item.id }}</td>
+					<td>{{ item.class_kind }}</td>
+					<td><a href="{% url 'refer:refer_detail' item.id %}">{{ item.subject }}</td>
+					<td>{{ item.attach }}</td>
+					<td>{{ item.mdate }}</td>
+					<td>{{ item.counter }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+</div>
+{% endblock %}

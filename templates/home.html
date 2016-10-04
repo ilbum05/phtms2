@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}PH Total Management System{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+<section id="contents">
+  <div id="contentsInner">
+    <div id="leftBanner">      
+		{% include "./banner_left_login.html" %}
+		{% include "./banner_left.html" %}
+	</div>
+    <div class="systemBtn">
+	  <p class="btn0"><a href="{% url 'evote' %}"><img src="{% static "img/systembtn_btn0.png" %}"  alt="전자투표서비스" border="0"></a></p>
+	  <p class="btn1"><a href="{% url 'ebid'  %}"><img src="{% static "img/systembtn_btn1.png" %}"  alt="전자입찰서비스"></a></p>
+	  <p class="btn2"><a href="{% url 'emro'  %}"><img src="{% static "img/systembtn_btn2.png" %}"  alt="소모품구매대행서비스"></a></p>	
+	  <p class="btn3"><a href="{% url 'epms'  %}"><img src="{% static "img/systembtn_btn3.png" %}"  alt="공사관리서비스"></a></p>	
+	 
+	</div>
+    {% include "./banner_right.html" %}
+	  </div>
+</section>>
+{% endblock content %}
+
+</body>

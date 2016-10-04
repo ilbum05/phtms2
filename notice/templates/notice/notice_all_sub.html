@@ -1,0 +1,39 @@
+{% block content %}
+<div class="privacyBox">
+
+	
+<div class="boardListBox">
+	<p class="h2Text">공지사항 및 최신 관련 뉴스 정보를 제공하고 있습니다. 신속하고 정확한 정보를 전달하기위해 최선을 다하겠습니다.<br />
+		<span class="orangeColor">(기타 문의사항은 고객센터로 연락바랍니다.)</span></p>
+	<table class="baseBoardList">
+		<colgroup>
+			<col width="6%" />
+			<col width="12%" />
+			<col width="*" />
+			<col width="20%" />
+			<col width="6%" />
+		<thead>
+			<tr>
+				<th scope="col">번호</th>
+				<th scope="col">구분</th>
+				<th scope="col">제목</th>
+				<th scope="col">작성일</th>
+				<th scope="col">조회수</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in object_list %}
+				<tr>
+					<td>{{ item.id }}</td>
+					<td>{{ item.class_kind }}</td>
+					<td><a href="{% url 'notice:notice_detail' item.id %}">{{ item.subject }}</td>
+					<td>{{ item.mdate }}</td>
+					<td>{{ item.counter }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+</div>
+{% endblock %}

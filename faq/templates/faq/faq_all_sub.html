@@ -1,0 +1,37 @@
+{% block content %}
+<div class="privacyBox">
+
+	<p class="h2Text">자주 질문하시는 내용의 답변을 등록하였으니 많은 이용 부탁드립니다.<br />
+		<span class="orangeColor">(문의하시기 전에 &quot;자주묻는질문&quot;을 다시한번 확인해주세요..)</span></p>
+	<table class="baseBoardList">
+		<colgroup>
+			<col width="6%" />
+			<col width="12%" />
+			<col width="*" />
+			<col width="20%" />
+			<col width="6%" />
+		<thead>
+			<tr>
+				<th scope="col">번호</th>
+				<th scope="col">구분</th>
+				<th scope="col">제목</th>
+				<th scope="col">작성일</th>
+				<th scope="col">조회수</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in object_list %}
+				<tr>
+					<td>{{ item.id }}</td>
+					<td>{{ item.class_kind }}</td>
+					<td><a href="{% url 'faq:faq_detail' item.id %}">{{ item.subject }}</td>
+					<td>{{ item.mdate }}</td>
+					<td>{{ item.counter }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+</div>
+{% endblock %}

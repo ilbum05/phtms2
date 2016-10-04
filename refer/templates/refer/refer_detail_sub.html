@@ -1,0 +1,18 @@
+
+<div class="privacyBox">
+<!-- <div class="boardListBox"> -->
+	<h2>{{ object.class_kind }} | {{ object.subject }}</h2>
+	<p class="date">{{ object.mdate|date:"Y. N. d" }} |  {{ object.owner }} </p><br/>
+	<p class="other_refers">
+		{% if object.get_previous_by_mdate %}
+			<a href="{{ object.get_previous_refer.get_absolute_url }}" title="View previous refer">&laquo;--이전 자료</a>
+		{% endif %}
+		{% if object.get_next_by_mdate %}
+			| <a href="{{ object.get_next_refer.get_absolute_url }}" title="View next refer">다음 자료--&raquo;</a><br /><br />
+		{% endif %}
+	</p>
+	<div class="body">
+		{{ object.content|linebreaks }}
+	</div>
+</div>
+

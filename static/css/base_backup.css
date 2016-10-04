@@ -1,0 +1,1015 @@
+* { margin: 0; padding: 0; }
+body { 
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+li { list-style: none; }
+a { text-decoration: none; }
+img { border: 0; }
+/* ----------------------------------------------------------- */
+/* ------------------------ 숨김 요소 ------------------------ */
+/* ----------------------------------------------------------- */
+legend, .blind, caption{
+	position:absolute;
+	top: -1000px;
+	overflow:hidden;	
+	width:0px;
+	height:0px;
+	font-size:0;
+	line-height:0;
+	z-index: 10000;
+	display: none;
+}
+/* ----------------------------------------------------------- */
+/* -------------------------- BODY --------------------------- */
+/* ----------------------------------------------------------- */
+body {
+	margin: 0;
+	padding: 0;
+	color:#333;
+	font-size:80%;
+	line-height:1.2;	
+	font-family:'Nanum Gothic';
+}
+
+/* ----------------------------------------------------------- */
+/* -------------------------- RESET -------------------------- */
+/* ----------------------------------------------------------- */
+
+/* 요소(element) 여백 초기화  */
+html, body,
+div, span,
+dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, address, pre, cite,
+form, fieldset, input, textarea, select,
+table, th, td {
+	margin:0;
+	padding:0;
+}
+
+/* 제목요소 */
+h1, h2, h3, h4, h5, h6 {  
+	font-size:100%;   
+	font-weight:normal;   
+} 
+
+/* 테두리 없애기 */
+fieldset, img, abbr, acronym { 
+	border:0 none;
+} 
+
+/* 목록 */
+ol, ul { list-style:none; }
+
+/* 테이블 - 마크업에 'cellspacing="0"' 지정 함께 필요
+table {
+	border-collapse: separate;
+	border-spacing:0;
+	border:0 none;
+} */
+caption,td {
+	text-align: justify;
+	font-weight: normal;
+}
+@media screen and (max-width:767px) {
+	th {
+		text-align: justify;
+		font-weight: normal;
+	}
+}
+/* 텍스트 관련 요소 초기화 */
+address, caption,em,cite {
+	font-weight:normal;
+	font-style:normal;
+}
+ins { text-decoration:none; }
+del { text-decoration:line-through; }
+
+/* 인용문 */
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+/* 수평선*/
+hr { display:none; }
+
+/* 링크요소 */
+a, a:link {
+	color: #666;
+	text-decoration:none;
+} 
+a:visited {
+	color:#666;
+	text-decoration:none;
+}
+a:hover {
+	color: #FF6600;
+	text-decoration:none;
+}
+a:focus {
+	color: #FF6600;
+	text-decoration:none;
+}
+a:active {
+	color: #FF6600;
+	text-decoration:none;
+}
+/* 세로정렬  */
+label, select, input, textarea{
+	vertical-align: middle;
+}
+img {
+	vertical-align: middle;
+}
+
+/*  푬관련  */
+input, textarea  :not([class*="webnote"]) {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+input[type=text],input[type=password] {
+	padding: 3px;
+	color: #666;
+	border: 1px solid #ccc;
+}
+input[type=file] {
+	padding: 3px;
+	cursor: pointer;
+}
+select {
+	padding: 3px;
+	color: #666;
+	border: 1px solid #ccc;
+}
+textarea {
+	padding: 4px;
+	color: #666;
+	border: 1px solid #ccc;
+}
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size:inherit;
+	font-family:'Nanum Gothic';
+	cursor: pointer;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------------------------- */
+/* --------------------------- BASE -------------------------- */
+/* ----------------------------------------------------------- */
+.displayBlock {
+	display: block;
+	width: 100%;
+	height: 100%;	
+}
+.fullWidth {
+	width: 100%;
+}
+.halfWidth {
+	width: 50%;
+}
+.thertyWidth {
+	width: 30%;
+}
+.autoWidth {
+	width: auto;
+}
+.return {
+	display: block;
+}
+.bold {
+	font-weight: bold;
+}
+.orangeColor {
+	color: #FF6600;
+}
+.blueColor {
+	color: #09C;
+}
+.greenColor {
+	color: #690;
+}
+.purpleColor {
+	color: #FF3366;
+}
+.grayColor333 {
+	color: #333;
+}
+.grayColor666 {
+	color: #666;
+}
+.grayColor999 {
+	color: #999;
+}
+.grayColorccc {
+	color: #ccc;
+}
+.blackColor {
+	color: #000;
+}
+.whiteColor {
+	color: #fff;
+}
+.blueBgBut {
+	background: #2fb6bc;
+}
+.purpleBgBut {
+	background: #FF3366;
+}
+.grayBgBut333 {
+	background: #333;
+}
+.grayBgBut666 {
+	background: #666;
+}
+.grayBgBut999 {
+	background: #999;
+}
+.grayBgButccc {
+	background: #ccc;
+}
+.blackBgBut {
+	background: #000;
+}
+.greenBgBut {
+	background: #66CC00;
+}
+.orangeBgBut {
+	background: #FF6600;
+}
+.center {
+	text-align: center;
+}
+.left {
+	text-align: justify;
+}
+.right {
+	text-align: right;
+}
+/* ------------------------ 더보기 ---------------------- */
+p.moreView {
+	margin: 0;
+	margin-top: 10px;
+	position: relative;
+	border-radius: 3px;
+	background: #666;
+	behavior: url(../scripts/PIE.htc);
+}
+p.moreView a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 3;
+	text-align: center;
+	color: #fff;
+}
+p.moreView a span.moreViewBut{
+	padding-left: 15px;
+	background: url(../images/info_plus.gif) no-repeat 0 center;
+}
+p.moreView span.topBut{
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 3px;
+	right: 3px;
+}
+/* ------------------------ butList ---------------------- */
+ul.butList{
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+ul.butList > li{
+	float: left;	
+}
+.liBut{
+	line-height: 2.5;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+.listBut{
+	background: #2fb6bc;
+}
+.listBut:hover{
+	background: #0099CC;
+}
+.writeBut{
+	background: #FF3366;
+}
+.writeBut:hover{
+	background: #ff0042;
+}
+.modifyBut {
+	background: #66CC00;
+}
+.modifyBut:hover{
+	background: #669900;
+}
+.replyWriteBut{
+	background: #FF6600;
+}
+.replyWriteBut:hover{
+	background: #FF3300;
+}
+.deleteBut{
+	background: #A3ABDC;
+}
+.deleteBut:hover{
+	background: #6666CC;
+}
+.cansleBut{
+	background: #A3ABDC;
+}
+.cansleBut:hover{
+	background: #6666CC;
+}
+/* ------------------------ singleBut ---------------------- */
+.but{
+	padding: 4.5px 0;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 3px;
+	vertical-align: middle;
+	behavior: url(../scripts/PIE.htc);
+}
+.butInline{
+	padding: 4.5px 10px;
+}
+.butWhite{
+	color: #999;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+.butWhite:hover{
+	color: #FF6600;
+	border: 1px solid #FF6600;
+}
+.butGray{
+	color: #fff;
+	background: #666;
+	border: 1px solid #333;
+}
+.butGray:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+.butBlue{
+	color: #fff;
+	background: #0099FF;
+	border: 1px solid #0066CC;
+}
+.butBlue:hover{
+	background: #0066CC;
+	border: 1px solid #333;
+}
+.butGreen{
+	color: #fff;
+	background: #669900;
+	border: 1px solid #6F8718;
+}
+.butGreen:hover{
+	background: #6F8718;
+	border: 1px solid #333;
+}
+.butOrange{
+	color: #fff;
+	background: #FF9900;
+	border: 1px solid #FF6600;
+}
+.butOrange:hover{
+	background: #FF6600;
+	border: 1px solid #FF0000;
+}
+.butpurple {
+	color: #fff;
+	background: #FF3366;
+	border: 1px solid #FF0042;
+}
+.butpurple:hover {
+	background: #FF0042;
+	border: 1px solid #CC0022;
+}
+/* -------------- 확인버튼 ---------------- */
+.confirmBut{
+	padding: 10px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	background: #0099FF;
+	border: 1px solid #0066CC;
+	behavior: url(../scripts/PIE.htc);
+}
+.confirmBut:hover{
+	background: #0066CC;
+	border: 1px solid #333;
+}
+/* -------------- 로그인버튼 ---------------- */
+.loginBut{
+	padding: 10px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background: #666;
+	border-radius: 3px;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+.loginBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+/* -------------- 중복체크버튼 ---------------- */
+.doubleChkBut{
+	padding: 5px 10px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 3px;
+	color: #fff;
+	vertical-align: middle;
+	background: #666;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+@media screen and (max-width:767px) {
+	.doubleChkBut{
+		display: block;
+		width: 98%;
+		padding: 5px 0;
+		margin: 5px 0;
+	}
+}
+.doubleChkBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+
+/* 게시판 비밀글/답변글/새글 아이콘 및 댓글삭제/쓰기버튼 , 파일선택버튼, 이전/다음버튼, 로그인버튼 */
+.newIcon{
+	padding: 2px 5px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #339900;
+	behavior: url(../scripts/PIE.htc);
+}
+.secretIcon{
+	padding: 2px 5px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #FF6600;
+	behavior: url(../scripts/PIE.htc);
+}
+.replyIcon{
+	padding: 2px 5px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #0099FF;
+	behavior: url(../scripts/PIE.htc);
+}
+.questionIcon{
+	padding: 2px 5px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #FF6600;
+	behavior: url(../scripts/PIE.htc);
+}
+.memoDeleteBut{
+	padding: 2px 5px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #666;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+.memoDeleteBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+.memoWriteBut{
+	padding: 4px 10px;
+	font-size: 0.9em;
+	color: #fff;
+	border-radius: 3px;
+	background: #666;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+.memoWriteBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+.mobileMemoWriteBut{
+	display: block;
+	padding: 10px 0;
+	font-size: 1.2em;
+	color: #fff;
+	border-radius: 3px;
+	background: #666;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+.mobileMemoWriteBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+.boardMoveBut{
+	padding: 5px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	background: #666;
+	border: 1px solid #333;
+	behavior: url(../scripts/PIE.htc);
+}
+.boardMoveBut:hover{
+	background: #333;
+	border: 1px solid #000;
+}
+.confirm_key {
+	padding: 4px 10px;
+	font-size: 0.9em;
+	color: #333;
+	border-radius: 3px;
+	background: #eee;
+	border: 1px solid #ccc;
+	behavior: url(../scripts/PIE.htc);
+}
+
+/* --------------------------- H/P/UL -------------------------- */
+h1.title {
+	padding: 10px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 20px;
+	text-align: center;
+	background: #666;
+}
+.h2Text {
+	text-align: justify;
+	margin-bottom: 20px;
+	color: #333;
+}
+.h2Text li {
+	margin-bottom: 5px;
+	padding: 5px 0;
+	padding-left: 15px;
+	background: url(../images/arrow_17.gif) no-repeat 0 9px;
+}
+
+h3.title {
+	margin-bottom: 10px;
+	padding: 5px 0;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #333;
+	padding-left: 20px;
+	background: url(../images/arrow_green.png) no-repeat 0 center;
+}
+.h3Text {
+	text-align: justify;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	color: #333;
+}
+.h3Text li {
+	margin-bottom: 5px;
+	padding: 5px 0;
+	padding-left: 20px;
+	background: url(../images/arrow_9.gif) no-repeat 0 7px;
+}
+h4.title {
+	margin-bottom: 10px;
+	margin-left: 20px;
+	padding: 5px 0;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #666;
+	padding-left: 15px;
+	background: url(../images/arrow_12.gif) no-repeat 0 center;
+}
+.h4Text {
+	text-align: justify;
+	margin-left: 35px;
+	margin-bottom: 20px;
+	color: #666;
+}
+.h4Text li {
+	margin-bottom: 5px;
+	padding: 2px 0;
+	padding-left: 10px;
+	background: url(../images/blue_icon.gif) no-repeat 0 7px;
+}
+h5.title {
+	margin-bottom: 10px;
+	margin-left: 35px;
+	padding: 5px 0;
+	font-size: 1em;
+	font-weight: bold;
+	color: #666;
+}
+.h5Text {
+	text-align: justify;
+	margin-left: 35px;
+	margin-bottom: 20px;
+	color: #999;
+}
+.h5Text li {
+	margin-bottom: 5px;
+	padding: 2px 0;
+	padding-left: 10px;
+	background: url(../images/arrow_8_gray.gif) no-repeat 0 7px;
+}
+/* ----------------------------------------------------------- */
+/* ------------------------ 헤더 영역 ------------------------ */
+/* ----------------------------------------------------------- */
+/* PAGE STRUCTURE */
+
+div#menu {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    height: 20px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 40px 0px;
+/*    background: #ffa; */
+	background: #91e842;
+    font-size: 10px;
+}
+
+div#content {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    right: 50px;
+}
+
+/* PAGE STRUCTURE  copy from ebidding , to home.css by shokim 
+
+div#footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    right: 50px;
+    height: 30px;
+    border-top:1px solid #ccc;
+} 
+*/
+
+
+/* MENU */
+div#menu a:link, div#menu a:visited {
+    color: #36c;
+}
+
+div#menu > li {
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px solid #bbb;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* pulldown menu */
+div#menu li  ul {
+    display:none;
+    position:absolute;
+    margin: 0;
+    padding:10px 10px 5px 10px;
+    list-style:none;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: white;
+    z-index: 1;
+}
+
+div#menu li:hover ul {
+    display:block;
+}
+
+/* LINK */
+a:link, a:visited {
+    color: #369;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* TABLE */
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    line-height: 18px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    padding: 5px 15px;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+
+}table.change-list, table.change-list th, table.change-list td {
+    border: 1px solid #ccc;
+}
+
+div#header_main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	height: 30px;
+    width: 100%;
+    display: table;
+	background: rgba(64,150,238,1);
+/*    background: orange; */
+}
+/* HEADER */
+.maintitle {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: #ffc;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.welcome {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 20px;
+    color: #ffc;
+    font-weight: normal;
+    font-size: 12px;
+	width: 100%;
+}
+	
+.welcome a:link, .welcome a:visited {
+    color: white;
+}
+
+#header {
+	position: relative;
+    left: 100px;
+	width: 100%;
+	visibility: visible;
+	background: url(../img/menu_pat.jpg) repeat-x 0 bottom;
+}
+
+#headerInner {
+	position: relative;
+	margin: 0 auto;
+}
+#headerInner .logoWrap {
+	position: absolute;
+	width: 100%;
+}
+#headerInner .logoWrap .logoWrapInner {
+	position: relative;
+	top: 20px;
+	margin: 0 auto;
+	background:url(../img/headerinner_bg.png) no-repeat 850px bottom;
+}
+#headerInner .logoWrap .logoWrapInner h1.logo {
+	text-align: relative;
+	top: 20px;	
+	z-index: 999;
+}
+#headerInner .logoWrap .logoWrapInner .logo2 {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+#headerInner .logoWrap .logoWrapInner .logo2 p {
+	padding: 5px 0;
+	top: 20px;
+	text-align: center;
+}
+#headerInner .logoWrap .logoWrapInner .logo2 p img {
+	position: absolute;
+	text-align: center;
+}
+#headerInner .infoMenuWrap {
+	width: 1133px;
+	background:url(../img/infomenu_pat.jpg) repeat-x 0 bottom;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner {
+	position: relative;
+	margin: 0 auto;
+	background:url(../img/infomenu_pat.jpg) repeat-x 0 bottom;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu {
+	width: 1133px;
+	font-size: 0.8em;
+	text-align: right;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu li {
+	display: inline;
+	padding: 0 7px 0 9px;
+	background: url(../img/menu_vertical_line.jpg) no-repeat 0px center;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu li.first {
+	background: none;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu li a {
+	font-weight: bold;
+	font-size: 1.2em;
+	color:#444;
+}
+#headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu li a:hover, #headerInner .infoMenuWrap .infoMenuWrapInner .infoMenu li a:focus {
+	color: #FFCC00;
+}
+.naviWrap {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 60px;
+	z-index: 998;
+}
+.naviWrap .naviWrapInner {
+	margin: 0 auto;
+	background: url(../img/menu_pat.jpg) repeat-x 0 bottom;
+}
+#navigation {
+	background: url(../img/navigation_bg.png) no-repeat 0px 0px;	
+}
+#navigation > li {
+	float:left;
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: bold;
+	background: url(../img/main_menu_line.png) no-repeat 0px 0px;	
+}
+#navigation > li.first {
+	background:none;
+}
+#navigation > li > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	color: #fff;
+}
+#navigation > li.lineOff {
+	background: none;
+}
+#navigation > li.on > a {
+	background:url(../img/naviWrapInner_o.jpg) no-repeat center 0px;
+	height: 30px;
+	color: #fff;
+}
+#navigation > li.onFirst > a {
+	background:url(../img/naviWrapInner_o.jpg) no-repeat left 0px;
+	height: 30px;
+	color: #fff;
+}
+#navigation > li.onLast > a {
+	background:url(../img/naviWrapInner_o.jpg) no-repeat right 0px;
+	height: 30px;
+	color: #fff;
+}
+#navigation li ul {
+	position: absolute;
+	background: #669900;
+	border: 1px solid #415C18;
+}
+#navigation li ul li {
+	float: left;
+	font-size: 0.85em;
+}
+#navigation li ul li.last {
+	border: none;
+}
+#navigation li ul li a {
+	display: block;		
+	font-weight: bold;
+	color: #fff;
+	padding: 0px 10px 0px 11px;
+	background: url(../img/menu_vertical_line.jpg) no-repeat 0 center;
+}
+#navigation li ul li.first a{
+	background: none;
+}
+#navigation li ul li.on a {
+	color: #FFFF00;
+}
+
+
+/* footer area  copy from ebid's footer.php bu shokim */
+
+#footer {
+	position: absolute;
+    left: 100px;
+	bottom: 100px;
+    right: 95px;
+    height: 30px;
+	width: 1133px;
+    border-top:1px solid #ccc;
+	background:url(../img/footer_pat.jpg) repeat-x 0 0;
+}
+
+#footerInner {
+	position:relative;
+	margin: 0 auto;
+	background:url(../img/footer_pat.jpg) repeat-x 0 0;
+}
+
+#footerInner .footerWrap{
+
+}
+
+#footerMenu {
+	position: relative;
+	width: 100%;
+	left: 270px;
+	height: 30px;
+	padding-top: 10px;
+	margin-bottom: 5px;
+}
+
+#footerMenu ul.footerMenuList {
+	height: 20px;
+	margin-bottom: 5px;
+	line-height: 2.5;	
+}
+
+#footerMenu ul.footerMenuList li {
+	float:left;
+	font-size: 0.9em;
+	font-weight:bold;
+	padding:2px 25px 0px 25px;
+	background: url(../img/menu_vertical_line.jpg) no-repeat 0px center;
+}
+
+#footerMenu ul.footerMenuList li.first {
+	background: none;
+	padding-left: 0;
+}
+#footerInner .footerWrap {
+  	position: relative;
+	height: 30px;
+	font-size:0.95em;
+	line-height:1.5;
+	color:#666;
+} 
+
+#footerInner .footerWrap  address {
+  	clear: both;
+	left: 270px;
+	position: relative;
+	font-size:0.95em;
+	line-height:1.5;
+	color:#666;
+} 
+
+#footerInner .footerWrap  address .company, #footerInner .footerWrap  address .busNo, #footerInner .footerWrap  address .addr, #footerInner .footerWrap  address .telNo, #footerInner .footerWrap  address .name {
+	padding: 0px 4px 0 5px;
+	background: url(../img/menu_vertical_line.jpg) no-repeat 0px center;
+}
+
+#footerInner .footerWrap address span.default {
+	padding-left: 0;
+	background: none;
+}
+
+#footerInner .footerWrap address .copyright {
+  	padding-left: 0px;
+	padding-top: 5px;
+	font-size: 0.8em;
+	color: #999;
+}
+#footerInner .footerWrap .footerlogo2 {
+	position:absolute;
+	top: 25px;
+	right: 0px;
+} 
+#footerInner .footerWrap .footerlogo1 {
+	position:absolute;
+	top: 25px;
+	left: 0px;
+} 
+

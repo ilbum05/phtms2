@@ -1,0 +1,43 @@
+{% load staticfiles %}
+{% block content %}
+<header id="header">
+	<div id="headerInner">
+		<div class="infoMenuWrap">
+			<div class="infoMenuWrapInner">
+				<ul class="infoMenu">
+					<li class="first"><a href="./"><span class="menuName">HOME</span></a></li> 
+					{% if user.is_active %}
+						<li><a href="./"><span class="menuName">Welcome,</span>{% firstof user.get_short_name user.get_username %}</a></li> 
+						<li><a href="{% url 'password_change' %}"><span class="menuName">Change Password</span></a></li> 
+						<li><a href="{% url 'logout' %}"><span class="menuName">Logout</span></a></li>
+						<li><a href="./"><span class="menuName">공인인증서 등록</span></a></li>
+					{% else %}
+						<li><a href="./"><span class="menuName">Welcome,</span>Anonymous</a></li> 
+						<li><a href="{% url 'login' %}"><span class="menuName">Login</span></a></li>
+						<li><a href="{% url 'register' %}"><span class="menuName">Register</span></a></li>
+					{% endif %}  
+				</ul>
+			</div>
+		</div>
+		<div class="logoWrap">
+			<div class="logoWrapInner">
+				<h1 class="logo"><a href="/"><img src="{% static "img/header_logo.png" %}" alt="도일시스템즈" /></a></h1>      
+				<div class="logo2">
+					<p><a href="/"><img src="{% static "img/header_logo3.png" %}" alt="전자입찰" /></a></p>        
+				</div>
+			</div>
+		</div>
+		<nav class="naviWrap">
+			<div class="naviWrapInner">
+				<h2 class="blind">주메뉴</h2>
+				<ul id="navigation">
+					<li class="first" active><a href="{% url "eintro" %}"><span class="menuName">회사소개</span></a></li>  
+					<li><a href="{% url "ebid" %}"><span class="menuName">서비스소개</span></a></li>    
+					<li><a href="{% url "esite" %}"><span class="menuName">고객센터</span></a></li>
+
+					</ul>	  
+			</div>
+		</nav>
+	</div>
+</header>
+{% endblock %}

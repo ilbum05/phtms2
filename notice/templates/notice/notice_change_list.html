@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}notice_change_list.html{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h1>공지사항 수정 - {{user}}</h1>
+    <table class="change-list">
+        <tr>
+            <th>buz_id</th>
+            <th>Class_kind</th>
+            <th>Owner</th>
+			<th>Subject</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for item in object_list %}
+            <tr>
+                <td>{{ item.buz_id }}</td>
+                <td>{{ item.class_kind }}</td>
+                <td>{{ item.owner }}</td>
+			    <td>{{ item.subject }}</td>
+                <td><a href="{% url 'notice:update' item.id %}">Update</a></td>
+                <td><a href="{% url 'notice:delete' item.id %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
